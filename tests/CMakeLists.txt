@@ -1,0 +1,8 @@
+enable_testing()
+find_package(Check REQUIRED)
+include_directories(${CHECK_INCLUDE_DIRS})
+set(LIBS ${LIBS} ${CHECK_LIBRARIES} utilc-template)
+include_directories(. ../include)
+add_executable(test-utilc-template test-utilc-template.c)
+target_link_libraries(test-utilc-template ${LIBS})
+add_test(test-utilc-template ${CMAKE_CURRENT_BINARY_DIR}/test-utilc-timing)

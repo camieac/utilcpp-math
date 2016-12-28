@@ -38,6 +38,8 @@ bin/
 lib/
 *.cmake
 CMake*
+!CMakeLists.txt
 !CMakeModules/
 !Find*.cmake
 Makefile
+install_manifest.txt
