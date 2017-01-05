@@ -1,5 +1,5 @@
 /**
-* @file utic-timing.c
+* @file utilc-timing.c
 * @author Cameron A. Craig
 * @date 28 Dec 2016
 * @version 0.1.0
