@@ -1,10 +1,10 @@
 /**
-* @file test-utilc-template.c
+* @file test-utilc-math.c
 * @author Cameron A. Craig
-* @date 28 Dec 2016
+* @date 17 Jan 2017
 * @version 0.1.0
-* @copyright 2016 Cameron A. Craig
-* @brief Unit tests for utilc-template.
+* @copyright 2017 Cameron A. Craig
+* @brief Unit tests for utilc-math.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
 
@@ -18,7 +18,7 @@
 #include <unistd.h>
 #include <check.h>
 
-#include "utilc-template.h"
+#include "utilc-math.h"
 
 /************************
 * Test Case Setup and teardown
@@ -53,10 +53,10 @@ END_TEST
 
 
 /**
-* @brief Defines test suite for utilc-template lib.
+* @brief Defines test suite for utilc-math lib.
 */
 Suite* utilc_test_suite (void) {
-				Suite *suite = suite_create("utilc_timing_test_suite");
+				Suite *suite = suite_create("utilc_math_test_suite");
 
 				TCase *tempate_tcase = tcase_create("Template Test Case");
 				tcase_add_checked_fixture(tempate_tcase, uc_template_test_setup, uc_template_test_teardown);

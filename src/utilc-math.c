@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-#include "utilc-template.h"
+#include "utilc-math.h"
 
 uint32_t uc_template_function(void){
 	return EXIT_SUCCESS;
