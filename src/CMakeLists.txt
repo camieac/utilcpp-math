@@ -1,6 +1,6 @@
 # Bring in the headers and sources
 include_directories(../include)
-file(GLOB SOURCES "*.c")
+file(GLOB SOURCES "*.cpp")
 
 # Generate the shared library from the sources
 add_library(utilc-math SHARED ${SOURCES})

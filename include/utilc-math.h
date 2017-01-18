@@ -11,9 +11,35 @@
 #ifndef UTILC_MATH_H
 #define UTILC_MATH_H
 
-#include <sys/time.h>
-#include <stdint.h>
+class ucm_vec3 {
+    private:
+      //Fields (Member variables)
+      float x;
+      float y;
+      float z;
 
-uint32_t uc_template_function(void);
+    public:
+        //Constructors
+        ucm_vec3();
+        ucm_vec3(float x, float y, float z);
+
+        //Overrideing operators
+        bool operator==(ucm_vec3 rhs);
+        ucm_vec3 operator+(ucm_vec3 rhs);
+        ucm_vec3 operator-(ucm_vec3 rhs);
+        ucm_vec3 operator*(ucm_vec3 rhs);
+        ucm_vec3 operator/(ucm_vec3 rhs);
+        ucm_vec3 operator+(float scalar);
+        ucm_vec3 operator-(float scalar);
+        ucm_vec3 operator*(float scalar);
+        ucm_vec3 operator/(float scalar);
+        ucm_vec3 cross(ucm_vec3 rhs);
+        float dot(ucm_vec3 rhs);
+        float length(void);
+};
+
+int ucm_version(void){
+  return 0;
+}
 
 #endif

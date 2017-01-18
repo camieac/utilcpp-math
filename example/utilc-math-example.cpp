@@ -8,11 +8,26 @@
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
 */
-#include <utilc-math.h>
+#include <iostream>
+using namespace std;
 
 #include <stdlib.h>
 
+#include "utilc-math.h"
+
 int main (int argc, char *argv[]){
-	uc_template_function();
+	//ucm_vec3 v1(0.1f, 0.1f, 0.1f);
+	 ucm_vec3 v1;
+	 //v1.length();
+	// ucm_vec3 v2();
+	//
+	// ucm_vec3 v3;// = v1 + v2;
+
+	//cout << v3.length();
+
+	cout << ucm_version();
+	cout << "\n";
+
+
 	return EXIT_SUCCESS;
 }

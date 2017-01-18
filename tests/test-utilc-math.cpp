@@ -44,9 +44,8 @@ void uc_template_test_teardown(void){
 * Unit Tests
 ************************/
 
-START_TEST (test_template){
-	uint32_t ret = uc_template_function();
-	fail_if(!ret);
+START_TEST (test_add){
+	ucm_vec3 v1(ucm_vec3());
 }
 END_TEST
 
@@ -58,9 +57,9 @@ END_TEST
 Suite* utilc_test_suite (void) {
 				Suite *suite = suite_create("utilc_math_test_suite");
 
-				TCase *tempate_tcase = tcase_create("Template Test Case");
+				TCase *tempate_tcase = tcase_create("3-axis Vector Addition Test Case");
 				tcase_add_checked_fixture(tempate_tcase, uc_template_test_setup, uc_template_test_teardown);
-				tcase_add_test(tempate_tcase, test_template);
+				tcase_add_test(tempate_tcase, test_add);
 				suite_add_tcase(suite, tempate_tcase);
 
 				return suite;
@@ -70,7 +69,7 @@ Suite* utilc_test_suite (void) {
 * @brief Run the full test suite.
 * @returns Number of tests failed.
 */
-uint32_t main (uint32_t argc, char *argv[]) {
+int main (int argc, char *argv[]) {
 				uint32_t number_failed;
 				Suite *suite = utilc_test_suite();
 				SRunner *runner = srunner_create(suite);
