@@ -18,7 +18,7 @@
 #include <unistd.h>
 #include <check.h>
 
-#include "utilc-math.h"
+#include <utilc-math.h>
 
 /************************
 * Test Case Setup and teardown
@@ -45,7 +45,7 @@ void uc_template_test_teardown(void){
 ************************/
 
 START_TEST (test_add){
-	ucm_vec3 v1(ucm_vec3());
+	ucm_vec3 v1;
 }
 END_TEST
 

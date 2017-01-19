@@ -16,12 +16,30 @@ using namespace std;
 #include <utilc-math.h>
 
 int main (int argc, char *argv[]){
+	//Define two vectors to be used throughout the examples.
 	ucm_vec3 v1(0.1f, 0.1f, 0.1f);
 	cout << "v1 = " << v1.toString() << endl;
+
 	ucm_vec3 v2;
 	cout << "v2 = " << v2.toString() << endl;
-	cout << "v1.x = " << v1.get_x() << endl;
-	cout << "v2.x = " << v2.get_x() << endl;
+
+	//Example vector arithmetic
+	ucm_vec3 sum = v1 + v2;
+
+	ucm_vec3 dif = v1 - v2;
+
+	float dot_prod = v1.dot(v2);
+
+	ucm_vec3 cross_prod = v1.cross(v2);
+
+	//Example scalar arithmetic
+	ucm_vec3 add = v1 + 3.0f;
+
+	ucm_vec3 sub = v1 - 1.0f;
+
+	ucm_vec3 mul = v1 * 2.0f;
+
+	ucm_vec3 div = v1 / 2.0f;
 
 	 if (v1 == v2){
 		 cout << "v1 == v2";

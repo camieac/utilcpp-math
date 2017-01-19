@@ -8,48 +8,11 @@
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
 */
+
 #ifndef UTILC_MATH_H
 #define UTILC_MATH_H
 
-#include <string>
-using namespace std;
-
-class ucm_vec3 {
-    private:
-      //Fields (Member variables)
-      float x;
-      float y;
-      float z;
-
-    public:
-        //Constructors
-        ucm_vec3();
-        ucm_vec3(float x, float y, float z);
-
-        float get_x(void);
-        float get_y(void);
-        float get_z(void);
-        void set_x(float x);
-        void set_y(float y);
-        void set_z(float z);
-
-        //Overrideing operators
-        bool operator==(ucm_vec3 rhs);
-        ucm_vec3 operator+(ucm_vec3 rhs);
-        ucm_vec3 operator-(ucm_vec3 rhs);
-        ucm_vec3 operator*(ucm_vec3 rhs);
-        ucm_vec3 operator/(ucm_vec3 rhs);
-        ucm_vec3 operator+(float scalar);
-        ucm_vec3 operator-(float scalar);
-        ucm_vec3 operator*(float scalar);
-        ucm_vec3 operator/(float scalar);
-        ucm_vec3 cross(ucm_vec3 rhs);
-        float dot(ucm_vec3 rhs);
-        float length(void);
-        string toString(void);
-};
-typedef class ucm_vec3 ucm_vec3;
-
-int ucm_version(void);
+#include "ucm_vec3.h"
+#include "ucm_vec4.h"
 
 #endif
