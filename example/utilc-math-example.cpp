@@ -13,11 +13,21 @@ using namespace std;
 
 #include <stdlib.h>
 
-#include "utilc-math.h"
+#include <utilc-math.h>
 
 int main (int argc, char *argv[]){
-	//ucm_vec3 v1(0.1f, 0.1f, 0.1f);
-	 ucm_vec3 v1;
+	ucm_vec3 v1(0.1f, 0.1f, 0.1f);
+	cout << "v1 = " << v1.toString() << endl;
+	ucm_vec3 v2;
+	cout << "v2 = " << v2.toString() << endl;
+	cout << "v1.x = " << v1.get_x() << endl;
+	cout << "v2.x = " << v2.get_x() << endl;
+
+	 if (v1 == v2){
+		 cout << "v1 == v2";
+	 }else {
+		 cout << "v1 != v2";
+	 }
 	 //v1.length();
 	// ucm_vec3 v2();
 	//
@@ -25,7 +35,7 @@ int main (int argc, char *argv[]){
 
 	//cout << v3.length();
 
-	cout << ucm_version();
+	// cout << ucm_version();
 	cout << "\n";
 
 
