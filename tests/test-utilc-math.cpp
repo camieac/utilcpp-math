@@ -12,69 +12,34 @@
 * https://libcheck.github.io/check/doc/check_html/index.html#Top
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <unistd.h>
-#include <check.h>
+#define BOOST_TEST_MODULE UCM_VEC3_TESTS
 
+#include <boost/test/unit_test.hpp>
 #include <utilc-math.h>
 
-/************************
-* Test Case Setup and teardown
-************************/
+static ucm_vec3 unit_x(1.0f, 0.0f, 0.0f);
+static ucm_vec3 unit_y(0.0f, 1.0f, 0.0f);
+static ucm_vec3 unit_z(0.0f, 0.0f, 1.0f);
 
-/**
-* @brief Setup
-* @details Checked fixture: Runs for each unit test.
-*/
-void uc_template_test_setup(void){
+static ucm_vec3 ones(1.0f, 1.0f, 1.0f);
+static ucm_vec3 zeros(0.0f, 0.0f, 0.0f);
 
+/* Scalar Arithmetic */
+
+BOOST_AUTO_TEST_CASE(test_scalar_add) {
+    BOOST_CHECK(unit_x + unit_y + unit_z == ones);        // #1 continues on error
 }
 
-/**
-* @brief Teardown
-* @details Checked fixture: Runs for each unit test.
-*/
-void uc_template_test_teardown(void){
-
+BOOST_AUTO_TEST_CASE(test_scalar_subtract) {
+    BOOST_CHECK(ones - unit_x - unit_y - unit_z == zeros);        // #1 continues on error
 }
 
-/************************
-* Unit Tests
-************************/
-
-START_TEST (test_add){
-	ucm_vec3 v1;
-}
-END_TEST
-
-
-
-/**
-* @brief Defines test suite for utilc-math lib.
-*/
-Suite* utilc_test_suite (void) {
-				Suite *suite = suite_create("utilc_math_test_suite");
-
-				TCase *tempate_tcase = tcase_create("3-axis Vector Addition Test Case");
-				tcase_add_checked_fixture(tempate_tcase, uc_template_test_setup, uc_template_test_teardown);
-				tcase_add_test(tempate_tcase, test_add);
-				suite_add_tcase(suite, tempate_tcase);
-
-				return suite;
+BOOST_AUTO_TEST_CASE(test_scalar_multiply) {
+    BOOST_CHECK(ones * 10 == ucm_vec3(10.0f, 10.0f, 10.0f));        // #1 continues on error
 }
 
-/**
-* @brief Run the full test suite.
-* @returns Number of tests failed.
-*/
-int main (int argc, char *argv[]) {
-				uint32_t number_failed;
-				Suite *suite = utilc_test_suite();
-				SRunner *runner = srunner_create(suite);
-				srunner_run_all(runner, CK_NORMAL);
-				number_failed = srunner_ntests_failed(runner);
-				srunner_free(runner);
-				return number_failed;
+BOOST_AUTO_TEST_CASE(test_scalar_divide) {
+    BOOST_CHECK(ucm_vec3(10.0f, 10.0f, 10.0f) / 10 == ones);        // #1 continues on error
 }
+
+/* Vector Arithmetic */
