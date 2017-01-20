@@ -28,10 +28,6 @@ ucm::vec3::vec3(float x, float y, float z){
   this->z = z;
 }
 
-bool ucm::vec3::operator==(vec3 rhs) {
-    return(this->x == rhs.x && this->y == rhs.y && this->z == rhs.z);
-}
-
 /* Vector Arithmetic */
 
 ucm::vec3 ucm::vec3::operator+(ucm::vec3 rhs) {
@@ -104,6 +100,19 @@ ucm::vec3 ucm::vec3::operator/(float scalar) {
 
 float ucm::vec3::length() {
     return float(sqrt(this->x*this->x + this->y*this->y + this->z*this->z));
+}
+
+bool ucm::vec3::operator==(vec3 rhs) {
+    return(this->x == rhs.x && this->y == rhs.y && this->z == rhs.z);
+}
+
+float ucm::vec3::operator[](int idx) {
+    switch(idx){
+			case 0: return this->x;
+			case 1: return this->y;
+			case 2: return this->z;
+			default: return NAN;
+		}
 }
 
 string ucm::vec3::toString(void) {

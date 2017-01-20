@@ -55,6 +55,7 @@ namespace ucm {
 
           //Miscellaneous methods
           float length(void);
+					float operator[](int idx);
           string toString(void);
   };
 };

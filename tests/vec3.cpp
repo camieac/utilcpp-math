@@ -75,6 +75,16 @@ BOOST_AUTO_TEST_CASE(test_scalar_divide) {
 	BOOST_CHECK(vec3(10.0f, 10.0f, 10.0f) / 10 == ones);
 }
 
+/* Miscellaneous */
+
+BOOST_AUTO_TEST_CASE(test_array_access) {
+	vec3 v = vec3(1.0f, 2.0f, 3.0f);
+	BOOST_CHECK(v[0] == v.x);
+	BOOST_CHECK(v[1] == v.y);
+	BOOST_CHECK(v[2] == v.z);
+}
+
+
 BOOST_AUTO_TEST_SUITE_END()
 
 /* Vector Arithmetic */
