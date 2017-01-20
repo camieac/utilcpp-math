@@ -12,7 +12,7 @@
 #ifndef UTILC_MATH_H
 #define UTILC_MATH_H
 
-#include "ucm_vec3.h"
-#include "ucm_vec4.h"
+#include "vec3.h"
+#include "vec4.h"
 
 #endif

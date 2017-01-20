@@ -10,5 +10,5 @@
 */
 
 #include "utilc-math.h"
-#include "ucm_vec3.h"
-#include "ucm_vec4.h"
+#include "vec3.h"
+#include "vec4.h"

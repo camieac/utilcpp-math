@@ -1,5 +1,5 @@
 /**
-* @file ucm_vec3.cppc
+* @file vec3.cppc
 * @author Cameron A. Craig
 * @date 17 Jan 2017
 * @version 0.1.0
@@ -13,4 +13,4 @@
 #include <stdbool.h>
 #include <math.h>
 
-#include "ucm_vec3.h"
+#include "vec4.h"
