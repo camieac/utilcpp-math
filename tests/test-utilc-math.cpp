@@ -12,67 +12,7 @@
 * https://libcheck.github.io/check/doc/check_html/index.html#Top
 */
 
-#define BOOST_TEST_MODULE vec3_TESTS
-
-#include <boost/test/unit_test.hpp>
-#include <utilc-math.h>
-using namespace ucm;
-
-static vec3 unit_x(1.0f, 0.0f, 0.0f);
-static vec3 unit_y(0.0f, 1.0f, 0.0f);
-static vec3 unit_z(0.0f, 0.0f, 1.0f);
-
-static vec3 ones(1.0f, 1.0f, 1.0f);
-static vec3 zeros(0.0f, 0.0f, 0.0f);
-
-/* Accessing fields */
-
-BOOST_AUTO_TEST_CASE(test_x) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.x == 62.92f);
-}
-
-BOOST_AUTO_TEST_CASE(test_y) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.y == 38.82f);
-}
-
-BOOST_AUTO_TEST_CASE(test_z) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.z == 52.70);
-}
-
-BOOST_AUTO_TEST_CASE(test_r) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.r == 62.92f);
-}
-
-BOOST_AUTO_TEST_CASE(test_g) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.g == 38.82f);
-}
-
-BOOST_AUTO_TEST_CASE(test_b) {
-	vec3 v(62.92f,38.82f,52.70f);
-	BOOST_CHECK(v.b == 52.70);
-}
-
-/* Scalar Arithmetic */
-
-BOOST_AUTO_TEST_CASE(test_scalar_add) {
-	BOOST_CHECK(unit_x + unit_y + unit_z == ones);
-}
-
-BOOST_AUTO_TEST_CASE(test_scalar_subtract) {
-	BOOST_CHECK(ones - unit_x - unit_y - unit_z == zeros);
-}
-
-BOOST_AUTO_TEST_CASE(test_scalar_multiply) {
-	BOOST_CHECK(ones * 10 == vec3(10.0f, 10.0f, 10.0f));
-}
-
-BOOST_AUTO_TEST_CASE(test_scalar_divide) {
-	BOOST_CHECK(vec3(10.0f, 10.0f, 10.0f) / 10 == ones);
-}
-
-/* Vector Arithmetic */
+#define BOOST_TEST_MODULE "Unit test module for ucm_math library"
+#include <boost/test/included/unit_test.hpp>
+#include "vec3.cpp"
+#include "vec4.cpp"

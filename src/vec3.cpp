@@ -17,9 +17,9 @@
 /* Constructors */
 
 ucm::vec3::vec3(){
-  x = 0.0f;
-  y = 0.0f;
-  z = 0.0f;
+  this->x = 0.0f;
+  this->y = 0.0f;
+  this->z = 0.0f;
 }
 
 ucm::vec3::vec3(float x, float y, float z){
@@ -103,7 +103,7 @@ ucm::vec3 ucm::vec3::operator/(float scalar) {
 /* Miscellaneous methods */
 
 float ucm::vec3::length() {
-    return float(sqrt( this->x*this->x + this->y*this->y + this->z*this->z ));
+    return float(sqrt(this->x*this->x + this->y*this->y + this->z*this->z));
 }
 
 string ucm::vec3::toString(void) {

@@ -7,7 +7,7 @@ set(INCLUDES ${Boost_INCLUDE_DIRS} ../include)
 # finds boost, triggers an error otherwise
 find_package(Boost ${MIN_BOOST_VERSION} REQUIRED COMPONENTS unit_test_framework)
 
-file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} *.cpp)
+file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test-utilc-math.cpp)
 
 if (NOT Boost_FOUND)
 	message(FATAL_ERROR "Fatal error: Boost (version >= " ${MIN_BOOST_VERSION} ") required.")
