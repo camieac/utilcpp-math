@@ -27,7 +27,6 @@ static vec4 ones(1.0f, 1.0f, 1.0f, 1.0f);
 static vec4 zeros(0.0f, 0.0f, 0.0f, 0.0f);
 
 /* Accessing fields */
-
 BOOST_AUTO_TEST_CASE(test_x) {
 	vec4 v(62.92f,38.82f,52.70f,37.97f);
 	BOOST_CHECK(v.x == 62.92f);
@@ -49,7 +48,6 @@ BOOST_AUTO_TEST_CASE(test_w) {
 }
 
 /* Scalar Arithmetic */
-
 BOOST_AUTO_TEST_CASE(test_scalar_add) {
 	BOOST_CHECK(zeros + 1.0f == ones);
 }
@@ -67,7 +65,6 @@ BOOST_AUTO_TEST_CASE(test_scalar_divide) {
 }
 
 /* Vector Arithmetic */
-
 BOOST_AUTO_TEST_CASE(test_vector_add) {
 	BOOST_CHECK(unit_x + unit_y + unit_z + unit_w == ones);
 }
@@ -86,8 +83,45 @@ BOOST_AUTO_TEST_CASE(test_vector_dot_product) {
 	);
 }
 
-/* Miscellaneous */
+/* Scalar Shorthand Operators */
+BOOST_AUTO_TEST_CASE(test_shorthand_scalar_add) {
+	vec4 v = zeros;
+	v += 1.0f;
+	BOOST_CHECK(v == ones);
+}
 
+BOOST_AUTO_TEST_CASE(test_shorthand_scalar_subtract) {
+	vec4 v = ones;
+	v -= 1.0f;
+	BOOST_CHECK(v == zeros);
+}
+
+BOOST_AUTO_TEST_CASE(test_shorthand_scalar_multiply) {
+	vec4 v = ones;
+	v *= 2.0f;
+	BOOST_CHECK(v == vec4(2.0f, 2.0f, 2.0f, 2.0f));
+}
+
+BOOST_AUTO_TEST_CASE(test_shorthand_scalar_divide) {
+	vec4 v = ones;
+	v /= 2.0f;
+	BOOST_CHECK(v == vec4(0.5f, 0.5f, 0.5f , 0.5f));
+}
+
+/* Vector Shorthand Operators */
+BOOST_AUTO_TEST_CASE(test_shorthand_vector_add) {
+	vec4 v = zeros;
+	v += ones;
+	BOOST_CHECK(v == ones);
+}
+
+BOOST_AUTO_TEST_CASE(test_shorthand_vector_subtract) {
+	vec4 v = ones;
+	v -= ones;
+	BOOST_CHECK(v == zeros);
+}
+
+/* Miscellaneous */
 BOOST_AUTO_TEST_CASE(test_array_access) {
 	vec4 v = vec4(1.0f, 2.0f, 3.0f, 4.0f);
 	BOOST_CHECK(v[0] == v.x);

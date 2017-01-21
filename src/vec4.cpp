@@ -15,7 +15,6 @@
 #include "vec4.h"
 
 /* Constructors */
-
 ucm::vec4::vec4(){
   this->x = 0.0f;
   this->y = 0.0f;
@@ -40,7 +39,6 @@ bool ucm::vec4::operator==(vec4 rhs) {
 }
 
 /* Vector Arithmetic */
-
 ucm::vec4 ucm::vec4::operator+(ucm::vec4 rhs) {
 	return ucm::vec4(
 		this->x + rhs.x,
@@ -107,8 +105,57 @@ ucm::vec4 ucm::vec4::operator/(float scalar) {
 	);
 }
 
-/* Miscellaneous methods */
+/* Shorthand vector operators */
+ucm::vec4 ucm::vec4::operator+=(vec4 rhs){
+	this->x = this->x + rhs.x;
+	this->y = this->y + rhs.y;
+  this->z = this->z + rhs.z;
+	this->w = this->w + rhs.w;
+	return (*this);
+}
 
+ucm::vec4 ucm::vec4::operator-=(vec4 rhs){
+	this->x = this->x - rhs.x;
+	this->y = this->y - rhs.y;
+  this->z = this->z - rhs.z;
+	this->w = this->w - rhs.w;
+	return (*this);
+}
+
+/* Shorthand scalar operators */
+ucm::vec4 ucm::vec4::operator+=(float scalar){
+	this->x = this->x + scalar;
+	this->y = this->y + scalar;
+  this->z = this->z + scalar;
+	this->w = this->w + scalar;
+	return (*this);
+}
+
+ucm::vec4 ucm::vec4::operator-=(float scalar){
+	this->x = this->x - scalar;
+	this->y = this->y - scalar;
+  this->z = this->z - scalar;
+	this->w = this->w - scalar;
+	return (*this);
+}
+
+ucm::vec4 ucm::vec4::operator*=(float scalar){
+	this->x = this->x * scalar;
+	this->y = this->y * scalar;
+  this->z = this->z * scalar;
+	this->w = this->w * scalar;
+	return (*this);
+}
+
+ucm::vec4 ucm::vec4::operator/=(float scalar){
+	this->x = this->x / scalar;
+	this->y = this->y / scalar;
+  this->z = this->z / scalar;
+	this->w = this->w / scalar;
+	return (*this);
+}
+
+/* Miscellaneous methods */
 float ucm::vec4::length() {
     return float(sqrt(
       this->x*this->x +

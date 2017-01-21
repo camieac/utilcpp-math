@@ -42,17 +42,30 @@ namespace ucm {
             };
           };
 
-          //Overloading operators
+          /* Overloading vector operators */
 					float operator[](int idx);
           bool operator==(vec4 rhs);
           vec4 operator+(vec4 rhs);
           vec4 operator-(vec4 rhs);
           vec4 operator*(vec4 rhs);
           vec4 operator/(vec4 rhs);
+
+					/* Overloading scalar operators */
           vec4 operator+(float scalar);
           vec4 operator-(float scalar);
           vec4 operator*(float scalar);
           vec4 operator/(float scalar);
+
+					/* Overloading scalar shorthand operators */
+					vec4 operator+=(float scalar);
+					vec4 operator-=(float scalar);
+					vec4 operator*=(float scalar);
+					vec4 operator/=(float scalar);
+
+					/* Overloading vector shorthand operators */
+					vec4 operator+=(vec4 rhs);
+					vec4 operator-=(vec4 rhs);
+
           vec4 cross(vec4 rhs);
           float dot(vec4 rhs);
 
