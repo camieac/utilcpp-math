@@ -5,30 +5,63 @@
 # utilc-math
 
 ## Introduction
-_This section of the README file introduces the library to developers._
 
-`utilc-math` contains templates for creating a new `utilc` library.
-All `utilc` projects try to keep to this template wherever possible.
-
+`utilc-math` a C++ maths library, originally designed for use in computer graphics for games programming.
+Currently, only vectors are implemented, but support for matrices and other useful mathematic constructs and operations may be added in the future.
+This library is graphics library agnostic, meaning it can be used with OpenGL, or any other graphics library. This library can also me use for any other application requiring vector maths.
 
 ## Purpose
-_Describe why this library is useful to the developer. What problems does this library solve?_
-
-This template saves the hassle of manually creating all the files that form a `utilc` library.
+The purpose of this library is to provide more advanced mathematical constructs, for any application.
 
 ## Code Example
 _Provide a code example showing the library API, try to keep the code nice and condensed.
 Don't bother with error checking, include comments if necessary.
 Provide a link to the example file, as shown below._
 
-A full example, making use of the full `utilc-math` API is available in [example](https://github.com/camieac/utilc-math/blob/master/example/utilc-math-example.c). A shortened example is given below:
+A full example, making use of the full `utilc-math` API is available in [example](https://github.com/camieac/utilc-math/blob/master/example/utilc-math-example.c). A 3-dimentional vector example is given below:
 ```
-uc_template_h template;
-uc_template_create(template)
+#include <utilc-math.h>
+#include <iostream>
+using namespace std;
+
+vec3 v1(1.0f, 1.0f, 3.0f);
+vec3 v2(1.0f, 1.0f, 3.0f);
+vec3 v3;
+
+//Vector arithmetic
+v3 = v1 + v2;
+v3 = v1 - v2;
+
+//Scalar arithmetic
+v3 = v1 + 10.0f;
+v3 = v1 - 24.0f;
+v3 = v1 * 32.0f;
+v3 = v1 / 16.0f;
+
+v3 = v1.dot(v2);
+v3 = v1.cross(v2);
+
+//length
+float len = v1.length();
+
+//Accessing individual elements
+float ax = a[0];
+float ay = a[1];
+float az = a[2];
+
+ax = a.x;
+ay = a.y;
+az = a.z;
+
+ax = a.r;
+ay = a.g;
+az = a.b;
+
+//Print
+cout << v1.toString() << endl;
 ```
 
 ## Installation
-_Provide basic installation instructions, whilst also linking to more detailed installation instructions._
 
 This project uses [CMake](https://cmake.org/) to build, test, and install `utic-timing`. Installation instructions are contained within [INSTALL.md](https://github.com/camieac/utilc-math/blob/master/INSTALL.md), and summarised below:
 
@@ -42,16 +75,11 @@ sudo make install
 
 You are also free to add the source files to your own project, and build yourself. Subject the GPL-3.0 license.
 
-[//]: # (Leave the license as-is, and there shouldn't be any need to change the below text.)
-
 ## License
 This project is released under the [General Public License 3.0 (GPL-3.0)](https://github.com/camieac/utilc-math/blob/master/LICENSE).
-
-[//]: # (The below text should be suitable for most projects.)
 
 ## Contributing
 Any contribution is welcome. The best way to do this is through Pull Requests. See [CONTRIBUTING.md](https://github.com/camieac/utilc-math/blob/master/CONTRIBUTING.md) for more info. In summary: fork, commit changes to fork, pull request. See the [Github Help](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) pages for further information.
 
-[//]: # (Add the authors here, update as necessary.)
 ## Authors
 Cameron A. Craig (@camieac)
