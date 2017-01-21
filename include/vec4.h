@@ -42,7 +42,8 @@ namespace ucm {
             };
           };
 
-          //Overriding operators
+          //Overloading operators
+					float operator[](int idx);
           bool operator==(vec4 rhs);
           vec4 operator+(vec4 rhs);
           vec4 operator-(vec4 rhs);

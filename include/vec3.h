@@ -40,7 +40,8 @@ namespace ucm {
             };
           };
 
-          //Overriding operators
+          //Overloading operators
+					float operator[](int idx);
           bool operator==(vec3 rhs);
           vec3 operator+(vec3 rhs);
           vec3 operator-(vec3 rhs);
@@ -55,7 +56,7 @@ namespace ucm {
 
           //Miscellaneous methods
           float length(void);
-					float operator[](int idx);
+
           string toString(void);
   };
 };

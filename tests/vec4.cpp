@@ -51,11 +51,11 @@ BOOST_AUTO_TEST_CASE(test_w) {
 /* Scalar Arithmetic */
 
 BOOST_AUTO_TEST_CASE(test_scalar_add) {
-	BOOST_CHECK(unit_x + unit_y + unit_z + unit_w == ones);
+	BOOST_CHECK(zeros + 1.0f == ones);
 }
 
 BOOST_AUTO_TEST_CASE(test_scalar_subtract) {
-	BOOST_CHECK(ones - unit_x - unit_y - unit_z - unit_w == zeros);
+	BOOST_CHECK(ones - 1.0f == zeros);
 }
 
 BOOST_AUTO_TEST_CASE(test_scalar_multiply) {
@@ -67,5 +67,33 @@ BOOST_AUTO_TEST_CASE(test_scalar_divide) {
 }
 
 /* Vector Arithmetic */
+
+BOOST_AUTO_TEST_CASE(test_vector_add) {
+	BOOST_CHECK(unit_x + unit_y + unit_z + unit_w == ones);
+}
+
+BOOST_AUTO_TEST_CASE(test_vector_subtract) {
+	BOOST_CHECK(ones - unit_x - unit_y - unit_z - unit_w == zeros);
+}
+
+BOOST_AUTO_TEST_CASE(test_vector_dot_product) {
+	BOOST_CHECK(ones.dot(ones) == 4.0f);
+	BOOST_CHECK(ones.dot(zeros) == 0.0f);
+	BOOST_CHECK(
+		vec4(82.54f, 93.25f, 162.34f, 961.34f).dot(
+			vec4(91.34f, 792.23f, 85.83f, 17.56f)
+		) == 112229.4237f
+	);
+}
+
+/* Miscellaneous */
+
+BOOST_AUTO_TEST_CASE(test_array_access) {
+	vec4 v = vec4(1.0f, 2.0f, 3.0f, 4.0f);
+	BOOST_CHECK(v[0] == v.x);
+	BOOST_CHECK(v[1] == v.y);
+	BOOST_CHECK(v[2] == v.z);
+	BOOST_CHECK(v[3] == v.w);
+}
 
 BOOST_AUTO_TEST_SUITE_END()

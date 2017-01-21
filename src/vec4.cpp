@@ -118,6 +118,16 @@ float ucm::vec4::length() {
     ));
 }
 
+float ucm::vec4::operator[](int idx) {
+    switch(idx){
+			case 0: return this->x;
+			case 1: return this->y;
+			case 2: return this->z;
+			case 3: return this->w;
+			default: return NAN;
+		}
+}
+
 string ucm::vec4::toString(void) {
     char c_string[55];
     char float_buffer[9];

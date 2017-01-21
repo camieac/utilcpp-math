@@ -75,6 +75,18 @@ BOOST_AUTO_TEST_CASE(test_scalar_divide) {
 	BOOST_CHECK(vec3(10.0f, 10.0f, 10.0f) / 10 == ones);
 }
 
+/* Vector Arithmetic */
+
+BOOST_AUTO_TEST_CASE(test_vector_dot_product) {
+	BOOST_CHECK(ones.dot(ones) == 3.0f);
+	BOOST_CHECK(ones.dot(zeros) == 0.0f);
+	BOOST_CHECK(
+		vec3(82.54f, 93.25f, 162.34f).dot(
+			vec3(91.34f, 792.23f, 85.83f)
+		) == 95348.2890625f
+	);
+}
+
 /* Miscellaneous */
 
 BOOST_AUTO_TEST_CASE(test_array_access) {
@@ -86,5 +98,3 @@ BOOST_AUTO_TEST_CASE(test_array_access) {
 
 
 BOOST_AUTO_TEST_SUITE_END()
-
-/* Vector Arithmetic */
