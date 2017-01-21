@@ -32,14 +32,23 @@ vec3 v3;
 v3 = v1 + v2;
 v3 = v1 - v2;
 
+v3 = v1.dot(v2);
+v3 = v1.cross(v2);
+
 //Scalar arithmetic
 v3 = v1 + 10.0f;
 v3 = v1 - 24.0f;
 v3 = v1 * 32.0f;
 v3 = v1 / 16.0f;
 
-v3 = v1.dot(v2);
-v3 = v1.cross(v2);
+//Shorthand operators
+v3 += 9.0f;
+v3 -= 9.0f;
+v3 *= 9.0f;
+v3 /= 9.0f;
+
+v3 += v1;
+v3 -= v1;
 
 //length
 float len = v1.length();
