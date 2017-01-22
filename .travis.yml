@@ -13,7 +13,7 @@ before_script:
  - pip install codecov
 
 script:
- - cmake .
+ - cmake -DBUILD_TYPE=Travis .
  - make
  - sudo make install
  - make coverage
