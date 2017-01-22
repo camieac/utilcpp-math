@@ -45,4 +45,4 @@ CMake*
 !Find*.cmake
 Makefile
 install_manifest.txt
-
+tests/test-utilc-math
