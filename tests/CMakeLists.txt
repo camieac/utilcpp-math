@@ -29,5 +29,12 @@ else()
 	target_link_libraries(test-utilc-math ${LIBS})
 
 	# Use boost shared library
-	target_compile_definitions(test-utilc-math PRIVATE "BOOST_TEST_DYN_LINK=1")#
+	target_compile_definitions(test-utilc-math PRIVATE "BOOST_TEST_DYN_LINK=1")
+
+	SETUP_TARGET_FOR_COVERAGE(
+		coverage  			# Name for coverage target.
+		test-utilc-math     # Name of the test driver executable that runs the tests.
+		coverage            # Name of output directory.
+	)
+
 endif (NOT Boost_FOUND)

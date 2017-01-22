@@ -10,8 +10,13 @@ before_script:
  - sudo add-apt-repository ppa:afrank/boost -y
  - sudo apt-get update -qq
  - sudo apt-get install -qq libboost1.57-all-dev
+ - pip install codecov
 
 script:
  - cmake .
  - make
  - sudo make install
+ - make coverage
+
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
