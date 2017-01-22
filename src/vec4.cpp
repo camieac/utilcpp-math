@@ -22,11 +22,11 @@ ucm::vec4::vec4(){
   this->w = 0.0f;
 }
 
-ucm::vec4::vec4(float x, float y, float z, float t){
+ucm::vec4::vec4(float x, float y, float z, float w){
   this->x = x;
   this->y = y;
   this->z = z;
-  this->w = t;
+  this->w = w;
 }
 
 bool ucm::vec4::operator==(vec4 rhs) {
@@ -191,7 +191,7 @@ string ucm::vec4::toString(void) {
     sprintf(float_buffer, "%f", this->z);
     strcat(c_string, float_buffer);
 
-    strcat(c_string,", t: ");
+    strcat(c_string,", w: ");
     sprintf(float_buffer, "%f", this->w);
     strcat(c_string, float_buffer);
 

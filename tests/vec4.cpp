@@ -26,6 +26,23 @@ static vec4 unit_w(0.0f, 0.0f, 0.0f, 1.0f);
 static vec4 ones(1.0f, 1.0f, 1.0f, 1.0f);
 static vec4 zeros(0.0f, 0.0f, 0.0f, 0.0f);
 
+/* Constructors */
+BOOST_AUTO_TEST_CASE(test_empty_constructor) {
+	vec4 v;
+	BOOST_CHECK(v.x == 0.0f);
+	BOOST_CHECK(v.y == 0.0f);
+	BOOST_CHECK(v.z == 0.0f);
+	BOOST_CHECK(v.w == 0.0f);
+}
+
+BOOST_AUTO_TEST_CASE(test_populated_constructor) {
+	vec4 v(62.92f,38.82f,52.70f,82.72f);
+	BOOST_CHECK(v.x == 62.92f);
+	BOOST_CHECK(v.y == 38.82f);
+	BOOST_CHECK(v.z == 52.70f);
+	BOOST_CHECK(v.w == 82.72f);
+}
+
 /* Accessing fields */
 BOOST_AUTO_TEST_CASE(test_x) {
 	vec4 v(62.92f,38.82f,52.70f,37.97f);
@@ -45,6 +62,15 @@ BOOST_AUTO_TEST_CASE(test_z) {
 BOOST_AUTO_TEST_CASE(test_w) {
 	vec4 v(62.92f,38.82f,52.70f,37.97f);
 	BOOST_CHECK(v.w == 37.97f);
+}
+
+BOOST_AUTO_TEST_CASE(test_array_access) {
+	vec4 v = vec4(1.0f, 2.0f, 3.0f, 4.0f);
+	BOOST_CHECK(v[0] == v.x);
+	BOOST_CHECK(v[1] == v.y);
+	BOOST_CHECK(v[2] == v.z);
+	BOOST_CHECK(v[3] == v.w);
+	BOOST_CHECK(v[4] != v[4]);
 }
 
 /* Scalar Arithmetic */
@@ -122,12 +148,17 @@ BOOST_AUTO_TEST_CASE(test_shorthand_vector_subtract) {
 }
 
 /* Miscellaneous */
-BOOST_AUTO_TEST_CASE(test_array_access) {
-	vec4 v = vec4(1.0f, 2.0f, 3.0f, 4.0f);
-	BOOST_CHECK(v[0] == v.x);
-	BOOST_CHECK(v[1] == v.y);
-	BOOST_CHECK(v[2] == v.z);
-	BOOST_CHECK(v[3] == v.w);
+BOOST_AUTO_TEST_CASE(test_length) {
+	vec4 v = vec4(6.0f, 6.0f, 7.0f, 0.0f);
+	BOOST_CHECK(v.length() == 11.0f);
+}
+
+BOOST_AUTO_TEST_CASE(test_tostring) {
+	vec4 v = vec4(6.0f, 6.0f, 7.0f, 8.0f);
+	BOOST_CHECK(
+		v.toString() ==
+			"(x: 6.000000, y: 6.000000, z: 7.000000, w: 8.000000)"
+	);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

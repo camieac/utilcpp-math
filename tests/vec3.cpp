@@ -76,7 +76,7 @@ BOOST_AUTO_TEST_CASE(test_array_access) {
 	BOOST_CHECK(v[0] == v.x);
 	BOOST_CHECK(v[1] == v.y);
 	BOOST_CHECK(v[2] == v.z);
-	BOOST_CHECK(v[3] != v[3]);
+	BOOST_CHECK(v[3] != v[3]); //Checking for NAN
 }
 
 /* Scalar Arithmetic */
