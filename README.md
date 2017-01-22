@@ -4,6 +4,8 @@
 
 # utilc-math
 
+[![Build Status](https://travis-ci.org/camieac/utilc-math.svg?branch=master)](https://travis-ci.org/camieac/utilc-math)
+
 ## Introduction
 
 `utilc-math` a C++ maths library, originally designed for use in computer graphics for games programming.
