@@ -14,3 +14,4 @@ before_script:
 script:
  - cmake .
  - make
+ - sudo make install
