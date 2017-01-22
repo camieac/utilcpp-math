@@ -133,13 +133,17 @@ ucm::vec3 ucm::vec3::operator+=(vec3 rhs){
 ucm::vec3 ucm::vec3::operator-=(vec3 rhs){
 	this->x = this->x - rhs.x;
 	this->y = this->y - rhs.y;
-  this->z = this->z - rhs.z;
+	this->z = this->z - rhs.z;
 	return (*this);
 }
 
 /* Miscellaneous methods */
 float ucm::vec3::length() {
-    return float(sqrt(this->x*this->x + this->y*this->y + this->z*this->z));
+    return float(sqrt(
+		this->x * this->x +
+		this->y * this->y +
+		this->z * this->z
+	));
 }
 
 bool ucm::vec3::operator==(vec3 rhs) {
