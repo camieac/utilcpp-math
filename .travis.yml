@@ -9,7 +9,7 @@ compiler:
 before_script:
  - sudo add-apt-repository ppa:afrank/boost -y
  - sudo apt-get update -qq
- - sudo apt-get install -qq libboost1.57-all-dev
+ - sudo apt-get install -qq libboost1.57-all-dev lcov
  - pip install codecov
 
 script:
