@@ -5,6 +5,7 @@
 # utilc-math
 
 [![Build Status](https://travis-ci.org/camieac/utilc-math.svg?branch=master)](https://travis-ci.org/camieac/utilc-math)
+[![codecov](https://codecov.io/gh/camieac/utilc-math/branch/master/graph/badge.svg)](https://codecov.io/gh/camieac/utilc-math)
 
 ## Introduction
 
