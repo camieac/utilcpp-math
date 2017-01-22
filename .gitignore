@@ -36,6 +36,7 @@
 build/
 bin/
 lib/
+Testing/
 *.cmake
 CMake*
 !CMakeLists.txt
