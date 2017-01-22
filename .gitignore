@@ -37,6 +37,7 @@ build/
 bin/
 lib/
 Testing/
+coverage/
 *.cmake
 CMake*
 !CMakeLists.txt
@@ -44,3 +45,4 @@ CMake*
 !Find*.cmake
 Makefile
 install_manifest.txt
+
