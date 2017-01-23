@@ -1,7 +1,3 @@
-[//]: # (The name of the project should appear at the top of the file.)
-
-[//]: # (Remove all of these comments when done.)
-
 # utilc-math
 
 [![Build Status](https://travis-ci.org/camieac/utilc-math.svg?branch=master)](https://travis-ci.org/camieac/utilc-math)
@@ -17,10 +13,6 @@ This library is graphics library agnostic, meaning it can be used with OpenGL, o
 The purpose of this library is to provide more advanced mathematical constructs, for any application.
 
 ## Code Example
-_Provide a code example showing the library API, try to keep the code nice and condensed.
-Don't bother with error checking, include comments if necessary.
-Provide a link to the example file, as shown below._
-
 A full example, making use of the full `utilc-math` API is available in [example](https://github.com/camieac/utilc-math/blob/master/example/utilc-math-example.c). A 3-dimentional vector example is given below:
 ```
 #include <utilc-math.h>
@@ -74,7 +66,6 @@ cout << v1.toString() << endl;
 ```
 
 ## Installation
-
 This project uses [CMake](https://cmake.org/) to build, test, and install `utic-timing`. Installation instructions are contained within [INSTALL.md](https://github.com/camieac/utilc-math/blob/master/INSTALL.md), and summarised below:
 
 ```
