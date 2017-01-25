@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <cmath>
 
-#include "vec3.h"
+#include ""
 
 /* Constructors */
 ucm::vec3::vec3(){
