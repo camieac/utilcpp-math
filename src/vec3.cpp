@@ -11,6 +11,7 @@
 
 #include <stdlib.h>
 #include <cmath>
+#include <iostream>
 
 #include "vec3.h"
 
@@ -178,4 +179,11 @@ string ucm::vec3::toString(void) {
     strcat(c_string,")");
 
     return std::string(c_string);
+}
+
+ostream& ucm::operator<<(ostream& os, const ucm::vec3& v){
+	os << v.x << endl;
+	os << v.y << endl;
+	os << v.z << endl;
+	return os;
 }

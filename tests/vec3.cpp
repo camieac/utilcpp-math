@@ -1,5 +1,5 @@
 /**
-* @file test-utilc-math.c
+* @file vec3.c
 * @author Cameron A. Craig
 * @date 17 Jan 2017
 * @version 0.1.0

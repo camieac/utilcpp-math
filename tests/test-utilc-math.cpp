@@ -16,3 +16,4 @@
 #include <boost/test/included/unit_test.hpp>
 #include "vec3.cpp"
 #include "vec4.cpp"
+#include "mat4x4.cpp"

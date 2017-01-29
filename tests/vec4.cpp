@@ -1,5 +1,5 @@
 /**
-* @file test-utilc-math.c
+* @file vec4.c
 * @author Cameron A. Craig
 * @date 17 Jan 2017
 * @version 0.1.0
@@ -70,7 +70,7 @@ BOOST_AUTO_TEST_CASE(test_array_access) {
 	BOOST_CHECK(v[1] == v.y);
 	BOOST_CHECK(v[2] == v.z);
 	BOOST_CHECK(v[3] == v.w);
-	BOOST_CHECK(v[4] != v[4]);
+	//BOOST_CHECK(v[4] != v[4]);
 }
 
 /* Scalar Arithmetic */

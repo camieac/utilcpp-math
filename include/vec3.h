@@ -78,6 +78,7 @@ namespace ucm {
 
 		string toString(void);
 	};
+	ostream& operator<<(ostream& os, const vec3& v);
 };
 
 #endif //UTILC_VEC_3_H
