@@ -71,9 +71,11 @@ namespace ucm {
 
 		//Miscellaneous methods
 		float length(void);
+
 		string toString(void);
 	};
 	ostream& operator<<(ostream& os, const vec4& v);
+	vec4 abs(vec4 v);
 };
 
 #endif //UTILC_VEC_3_H

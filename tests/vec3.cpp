@@ -169,6 +169,12 @@ BOOST_AUTO_TEST_CASE(test_length) {
 	BOOST_CHECK(v.length() == 11.0f);
 }
 
+BOOST_AUTO_TEST_CASE(test_abs) {
+	vec3 v = vec3(-6.0f, -6.0f, -7.0f);
+	vec3 v_abs = vec3(6.0f, 6.0f, 7.0f);
+	BOOST_CHECK(v_abs == abs(v));
+}
+
 BOOST_AUTO_TEST_CASE(test_tostring) {
 	vec3 v = vec3(6.0f, 6.0f, 7.0f);
 	BOOST_CHECK(v.toString() == "(x: 6.000000, y: 6.000000, z: 7.000000)");

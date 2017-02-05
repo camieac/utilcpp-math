@@ -147,6 +147,14 @@ float ucm::vec3::length() {
 	));
 }
 
+ucm::vec3 ucm::abs(ucm::vec3 v) {
+	return ucm::vec3(
+		std::abs(v.x),
+		std::abs(v.y),
+		std::abs(v.z)
+	);
+}
+
 bool ucm::vec3::operator==(vec3 rhs) {
     return(this->x == rhs.x && this->y == rhs.y && this->z == rhs.z);
 }

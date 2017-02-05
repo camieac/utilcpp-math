@@ -153,6 +153,12 @@ BOOST_AUTO_TEST_CASE(test_length) {
 	BOOST_CHECK(v.length() == 11.0f);
 }
 
+BOOST_AUTO_TEST_CASE(test_abs) {
+	vec4 v = vec4(-6.0f, -6.0f, -7.0f, 0.0f);
+	vec4 v_abs = vec4(6.0f, 6.0f, 7.0f, 0.0f);
+	BOOST_CHECK(v_abs == abs(v));
+}
+
 BOOST_AUTO_TEST_CASE(test_tostring) {
 	vec4 v = vec4(6.0f, 6.0f, 7.0f, 8.0f);
 	BOOST_CHECK(

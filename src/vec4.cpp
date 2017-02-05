@@ -166,6 +166,15 @@ float ucm::vec4::length() {
 	));
 }
 
+ucm::vec4 ucm::abs(ucm::vec4 v) {
+	return ucm::vec4(
+		std::abs(v.x),
+		std::abs(v.y),
+		std::abs(v.z),
+		std::abs(v.w)
+	);
+}
+
 float& ucm::vec4::operator[](int idx) {
     switch(idx){
 		case 0: return this->x;
