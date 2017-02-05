@@ -66,7 +66,7 @@ cout << v1.toString() << endl;
 ```
 
 ## Installation
-This project uses [CMake](https://cmake.org/) to build, test, and install `utic-timing`. Installation instructions are contained within [INSTALL.md](https://github.com/camieac/utilc-math/blob/master/INSTALL.md), and summarised below:
+This project uses [CMake](https://cmake.org/) to build, test, and install `utilc-timing`. Installation instructions are contained within [INSTALL.md](https://github.com/camieac/utilc-math/blob/master/INSTALL.md), and summarised below:
 
 ```
 git clone https://github.com/camieac/utilc-math.git
