@@ -55,6 +55,7 @@ namespace ucm {
 		vec4 operator-(float scalar);
 		vec4 operator*(float scalar);
 		vec4 operator/(float scalar);
+		vec4 operator%(float scalar);
 
 		/* Overloading scalar shorthand operators */
 		vec4 operator+=(float scalar);

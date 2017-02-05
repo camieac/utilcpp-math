@@ -94,6 +94,14 @@ ucm::vec3 ucm::vec3::operator/(float scalar) {
 	);
 }
 
+ucm::vec3 ucm::vec3::operator%(float scalar) {
+	return ucm::vec3(
+		this->x % scalar,
+		this->y % scalar,
+		this->z % scalar
+	);
+}
+
 /* Shorthand scalar operators */
 ucm::vec3 ucm::vec3::operator+=(float scalar){
 	this->x = this->x + scalar;

@@ -55,6 +55,7 @@ namespace ucm {
 		vec3 operator-(float scalar);
 		vec3 operator*(float scalar);
 		vec3 operator/(float scalar);
+		vec3 operator%(float scalar);
 
 		/* Overloading vector shorthand operators */
 		vec3 operator*=(vec3 rhs);

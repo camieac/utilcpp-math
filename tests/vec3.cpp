@@ -96,6 +96,10 @@ BOOST_AUTO_TEST_CASE(test_scalar_divide) {
 	BOOST_CHECK(vec3(10.0f, 10.0f, 10.0f) / 10 == ones);
 }
 
+BOOST_AUTO_TEST_CASE(test_scalar_modulo) {
+	BOOST_CHECK(vec3(10.0f, 10.0f, 10.0f) % 9.0f == ones);
+}
+
 /* Vector Arithmetic */
 BOOST_AUTO_TEST_CASE(test_vector_add) {
 	BOOST_CHECK(zeros + ones == ones);

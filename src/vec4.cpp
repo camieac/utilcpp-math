@@ -106,6 +106,15 @@ ucm::vec4 ucm::vec4::operator/(float scalar) {
 	);
 }
 
+ucm::vec4 ucm::vec4::operator%(float scalar) {
+	return ucm::vec4(
+		this->x % scalar,
+		this->y % scalar,
+		this->z % scalar,
+		this->w % scalar
+	);
+}
+
 /* Shorthand vector operators */
 ucm::vec4 ucm::vec4::operator+=(vec4 rhs){
 	this->x = this->x + rhs.x;
