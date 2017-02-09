@@ -24,6 +24,13 @@ ucm::vec4::vec4(){
 	this->w = 0.0f;
 }
 
+ucm::vec4::vec4(float xyzw){
+	this->x = xyzw;
+	this->y = xyzw;
+	this->z = xyzw;
+	this->w = xyzw;
+}
+
 ucm::vec4::vec4(float x, float y, float z, float w){
 	this->x = x;
 	this->y = y;
