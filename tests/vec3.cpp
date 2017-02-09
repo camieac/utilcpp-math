@@ -33,6 +33,13 @@ BOOST_AUTO_TEST_CASE(test_empty_constructor) {
 	BOOST_CHECK(v.z == 0.0f);
 }
 
+BOOST_AUTO_TEST_CASE(test_single_constructor) {
+	vec3 v(62.92f);
+	BOOST_CHECK(v.x == 62.92f);
+	BOOST_CHECK(v.y == 62.92f);
+	BOOST_CHECK(v.z == 62.92f);
+}
+
 BOOST_AUTO_TEST_CASE(test_populated_constructor) {
 	vec3 v(62.92f,38.82f,52.70f);
 	BOOST_CHECK(v.x == 62.92f);

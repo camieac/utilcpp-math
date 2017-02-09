@@ -22,6 +22,7 @@ namespace ucm {
 	public:
 		//Constructors
 		vec3();
+		vec3(float xyz);
 		vec3(float x, float y, float z);
 
 		//Fields (Member variables)

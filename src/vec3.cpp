@@ -28,6 +28,12 @@ ucm::vec3::vec3(float x, float y, float z){
   this->z = z;
 }
 
+ucm::vec3::vec3(float xyz){
+  this->x = xyz;
+  this->y = xyz;
+  this->z = xyz;
+}
+
 /* Vector Arithmetic */
 ucm::vec3 ucm::vec3::operator+(ucm::vec3 rhs) {
 	return ucm::vec3(
