@@ -38,6 +38,14 @@ BOOST_AUTO_TEST_CASE(test_empty_constructor) {
 	BOOST_CHECK(m[3] == v_zeros);
 }
 
+BOOST_AUTO_TEST_CASE(test_single_constructor) {
+	mat4x4 m(91.72f);
+	BOOST_CHECK(m[0] == vec4(91.72f));
+	BOOST_CHECK(m[1] == vec4(91.72f));
+	BOOST_CHECK(m[2] == vec4(91.72f));
+	BOOST_CHECK(m[3] == vec4(91.72f));
+}
+
 BOOST_AUTO_TEST_CASE(test_populated_constructor) {
 	mat4x4 m(v_unit_x, v_unit_y, v_unit_z, v_unit_w);
 	BOOST_CHECK(m[0] == v_unit_x);

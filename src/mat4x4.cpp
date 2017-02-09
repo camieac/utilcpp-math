@@ -23,6 +23,13 @@ ucm::mat4x4::mat4x4(){
 	this->mat[3] *= 0.0f;
 }
 
+ucm::mat4x4::mat4x4(float all){
+	this->mat[0] = ucm::vec4(all);
+	this->mat[1] = ucm::vec4(all);
+	this->mat[2] = ucm::vec4(all);
+	this->mat[3] = ucm::vec4(all);
+}
+
 ucm::mat4x4::mat4x4(ucm::vec4 col1, ucm::vec4 col2, ucm::vec4 col3, ucm::vec4 col4){
   this->mat[0] = col1;
   this->mat[1] = col2;

@@ -24,6 +24,7 @@ namespace ucm {
 		public:
 			//Constructors
 			mat4x4();
+			mat4x4(float all);
 			mat4x4(ucm::vec4 col1, ucm::vec4 col2, ucm::vec4 col3, ucm::vec4 col4);
 
 			//Fields (Member variables)
