@@ -153,6 +153,14 @@ float ucm::vec3::length() {
 	));
 }
 
+ucm::vec3 ucm::vec3::normalize() {
+	float l = this->length();
+	this->x /= l;
+	this->y /= l;
+	this->z /= l;
+	return (*this);
+}
+
 ucm::vec3 ucm::abs(ucm::vec3 v) {
 	return ucm::vec3(
 		std::abs(v.x),

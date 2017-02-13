@@ -176,6 +176,16 @@ BOOST_AUTO_TEST_CASE(test_length) {
 	BOOST_CHECK(v.length() == 11.0f);
 }
 
+BOOST_AUTO_TEST_CASE(test_normalize) {
+	vec3 v = vec3(4.0f, 4.0f, 4.0f);
+	v.normalize();
+	//Never seems to be exactly one
+	BOOST_CHECK(v.length() > 0.9999f);
+	BOOST_CHECK(v.length() < 1.0001f);
+	BOOST_CHECK(v.x == v.y);
+	BOOST_CHECK(v.y == v.z);
+}
+
 BOOST_AUTO_TEST_CASE(test_abs) {
 	vec3 v = vec3(-6.0f, -6.0f, -7.0f);
 	vec3 v_abs = vec3(6.0f, 6.0f, 7.0f);

@@ -76,6 +76,7 @@ namespace ucm {
 
 		//Miscellaneous methods
 		float length(void);
+		vec3 normalize();
 
 		string toString(void);
 	};
