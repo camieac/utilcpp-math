@@ -16,6 +16,7 @@ script:
  - cmake -DBUILD_TYPE=Travis .
  - make
  - sudo make install
+ - pip install urllib3[secure]
  - make coverage
 
 after_success:
