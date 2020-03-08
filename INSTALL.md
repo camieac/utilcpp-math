@@ -4,11 +4,11 @@
 
 1. Clone the repository to your computer.
 	```
-	git clone https://github.com/camieac/utilc-math.git
+	git clone https://github.com/camieac/utilcpp-math.git
 	```
-2. Enter the `utilc-math` directory.
+2. Enter the `utilcpp-math` directory.
 	```
-	cd utilc-math
+	cd utilcpp-math
 	```
 3. Generate the build system.
 	```

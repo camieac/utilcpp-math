@@ -4,7 +4,7 @@
 * @date 17 Jan 2017
 * @version 0.1.0
 * @copyright 2017 Cameron A. Craig
-* @brief Unit tests for utilc-math.
+* @brief Unit tests for utilcpp-math.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
 
@@ -13,7 +13,7 @@
 */
 
 #include <boost/test/unit_test.hpp>
-#include <utilc-math.h>
+#include <utilcpp-math.h>
 using namespace ucm;
 
 BOOST_AUTO_TEST_SUITE(VEC3_TEST_SUITE)

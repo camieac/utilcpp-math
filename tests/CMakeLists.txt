@@ -5,7 +5,7 @@ set(INCLUDES ${Boost_INCLUDE_DIRS} ../include)
 # finds boost, triggers an error otherwise
 find_package(Boost ${MIN_BOOST_VERSION} REQUIRED COMPONENTS unit_test_framework)
 
-file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test-utilc-math.cpp)
+file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test-utilcpp-math.cpp)
 
 if (NOT Boost_FOUND)
 	message(FATAL_ERROR "Fatal error: Boost (version >= " ${MIN_BOOST_VERSION} ") required.")
@@ -14,27 +14,27 @@ else()
 
 	include_directories (${INCLUDES})
 
-	add_executable(test-utilc-math ${TEST_SRCS})
+	add_executable(test-utilcpp-math ${TEST_SRCS})
 
 	# Overriding global config, test binary goes in tests folder
-	set_target_properties(test-utilc-math
-	    PROPERTIES
-	    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests"
+	set_target_properties(test-utilcpp-math
+		PROPERTIES
+		RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/tests"
 	)
 
-	add_test(test-utilc-math ${CMAKE_CURRENT_BINARY_DIR}/test-utilc-math)
+	add_test(test-utilcpp-math ${CMAKE_CURRENT_BINARY_DIR}/test-utilcpp-math)
 	message(STATUS "Test binary is located in " ${CMAKE_CURRENT_BINARY_DIR})
 
-	set(LIBS utilc-math ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
-	target_link_libraries(test-utilc-math ${LIBS})
+	set(LIBS utilcpp-math ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
+	target_link_libraries(test-utilcpp-math ${LIBS})
 
 	# Use boost shared library
-	target_compile_definitions(test-utilc-math PRIVATE "BOOST_TEST_DYN_LINK=1")
+	target_compile_definitions(test-utilcpp-math PRIVATE "BOOST_TEST_DYN_LINK=1")
 
 	SETUP_TARGET_FOR_COVERAGE(
-		coverage  			# Name for coverage target.
-		test-utilc-math     # Name of the test driver executable that runs the tests.
-		coverage            # Name of output directory.
+		coverage			# Name for coverage target.
+		test-utilcpp-math	# Name of the test driver executable that runs the tests.
+		coverage			# Name of output directory.
 	)
 
 endif (NOT Boost_FOUND)
