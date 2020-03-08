@@ -2,7 +2,7 @@
 * @file mat4x4.cpp
 * @author Cameron A. Craig
 * @date 29 Jan 2017
-* @version 0.1.0
+* @version 0.2.0
 * @copyright 2017 Cameron A. Craig
 * @brief 4-axis vector maths.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename

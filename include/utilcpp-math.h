@@ -2,7 +2,7 @@
 * @file utilc-math.h
 * @author Cameron A. Craig
 * @date 17 Jan 2017
-* @version 0.1.0
+* @version 0.2.0
 * @copyright 2017 Cameron A. Craig
 * @brief Defines uc_timing_h handle and function prototypes.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename

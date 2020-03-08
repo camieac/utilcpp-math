@@ -2,7 +2,7 @@
 * @file constants.h
 * @author Cameron A. Craig
 * @date 27 Jan 2017
-* @version 0.1.0
+* @version 0.2.0
 * @copyright 2017 Cameron A. Craig
 * @brief Defines common mathematical constants
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
