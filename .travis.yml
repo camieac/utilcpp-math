@@ -2,21 +2,20 @@ language: cpp
 sudo: required
 
 compiler:
- - gcc
+- gcc
 
-# Add Boost 1.57 PPA and install
+# Install Boost from default repository
 before_script:
- - sudo add-apt-repository ppa:afrank/boost -y
- - sudo apt-get update -qq
- - sudo apt-get install -qq libboost1.57-all-dev lcov
- - pip install codecov
+- sudo apt install libboost-dev
+- sudo apt install libboost-all-dev
+- pip install codecov
 
 script:
- - cmake -DBUILD_TYPE=Travis .
- - make
- - sudo make install
- - pip install urllib3[secure]
- - make coverage
+- cmake -DBUILD_TYPE=Travis .
+- make
+- sudo make install
+- pip install urllib3[secure]
+- make coverage
 
 after_success:
- - bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.io/bash)
