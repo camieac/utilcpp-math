@@ -6,6 +6,8 @@ compiler:
 
 # Install Boost from default repository
 before_script:
+- sudo add-apt-repository universe
+- sudo apt-get update
 - sudo apt install libboost-dev
 - sudo apt install libboost-all-dev
 - pip install codecov
