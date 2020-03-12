@@ -4,12 +4,15 @@ sudo: required
 compiler:
 - gcc
 
-# Install Boost from default repository
+addons:
+  apt:
+    update: true
+    sources:
+      - sourceline: 'ppa:mhier/libboost-latest'
+    packages:
+      - boost1.67
+
 before_script:
-- sudo add-apt-repository universe
-- sudo apt-get update
-- sudo apt install libboost-dev
-- sudo apt install libboost-all-dev
 - pip install codecov
 
 script:
