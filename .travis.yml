@@ -13,7 +13,7 @@ addons:
       - boost1.67
 
 before_script:
-- pip install codecov
+- sudo pip install codecov
 
 script:
 - cmake -DBUILD_TYPE=Travis .
