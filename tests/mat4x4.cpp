@@ -8,7 +8,7 @@
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
 
-* @note Check unit test documentation can be cound here:
+* @note Check unit test documentation can be found here:
 * https://libcheck.github.io/check/doc/check_html/index.html#Top
 */
 #include <sstream>

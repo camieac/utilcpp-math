@@ -5,7 +5,7 @@ set(INCLUDES ${Boost_INCLUDE_DIRS} ../include)
 # finds boost, triggers an error otherwise
 find_package(Boost ${MIN_BOOST_VERSION} REQUIRED COMPONENTS unit_test_framework)
 
-file(GLOB TEST_SRCS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} test-utilcpp-math.cpp)
+file(GLOB TEST_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
 if (NOT Boost_FOUND)
 	message(FATAL_ERROR "Fatal error: Boost (version >= " ${MIN_BOOST_VERSION} ") required.")
@@ -32,9 +32,9 @@ else()
 	target_compile_definitions(test-utilcpp-math PRIVATE "BOOST_TEST_DYN_LINK=1")
 
 	SETUP_TARGET_FOR_COVERAGE(
-		coverage			# Name for coverage target.
+		coverage		# Name for coverage target.
 		test-utilcpp-math	# Name of the test driver executable that runs the tests.
-		coverage			# Name of output directory.
+		coverage		# Name of output directory.
 	)
 
 endif (NOT Boost_FOUND)
