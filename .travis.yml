@@ -11,6 +11,7 @@ addons:
       - sourceline: 'ppa:mhier/libboost-latest'
     packages:
       - boost1.67
+      - lcov
 
 before_script:
 - sudo pip install codecov
