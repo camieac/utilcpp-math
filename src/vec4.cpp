@@ -1,9 +1,7 @@
 /**
 * @file vec4.cpp
 * @author Cameron A. Craig
-* @date 20 Jan 2017
-* @version 0.2.0
-* @copyright 2017 Cameron A. Craig
+* @copyright 2017 - 2020 Cameron A. Craig
 * @brief 4-axis vector maths.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
@@ -183,7 +181,7 @@ ucm::vec4 ucm::abs(ucm::vec4 v) {
 }
 
 float& ucm::vec4::operator[](int idx) {
-    switch(idx){
+	switch(idx){
 		case 0: return this->x;
 		case 1: return this->y;
 		case 2: return this->z;
@@ -192,28 +190,28 @@ float& ucm::vec4::operator[](int idx) {
 }
 
 string ucm::vec4::toString(void) {
-    char c_string[55];
-    char float_buffer[9];
+	char c_string[55];
+	char float_buffer[9];
 
-    strcpy(c_string,"(x: ");
-    sprintf(float_buffer, "%f", this->x);
-    strcat(c_string,float_buffer);
+	strcpy(c_string,"(x: ");
+	sprintf(float_buffer, "%f", this->x);
+	strcat(c_string,float_buffer);
 
-    strcat(c_string,", y: ");
-    sprintf(float_buffer, "%f", this->y);
-    strcat(c_string,float_buffer);
+	strcat(c_string,", y: ");
+	sprintf(float_buffer, "%f", this->y);
+	strcat(c_string,float_buffer);
 
-    strcat(c_string,", z: ");
-    sprintf(float_buffer, "%f", this->z);
-    strcat(c_string, float_buffer);
+	strcat(c_string,", z: ");
+	sprintf(float_buffer, "%f", this->z);
+	strcat(c_string, float_buffer);
 
-    strcat(c_string,", w: ");
-    sprintf(float_buffer, "%f", this->w);
-    strcat(c_string, float_buffer);
+	strcat(c_string,", w: ");
+	sprintf(float_buffer, "%f", this->w);
+	strcat(c_string, float_buffer);
 
-    strcat(c_string,")");
+	strcat(c_string,")");
 
-    return std::string(c_string);
+	return std::string(c_string);
 }
 
 ostream& ucm::operator<<(ostream& os, const ucm::vec4& v){

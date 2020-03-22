@@ -1,9 +1,7 @@
 /**
 * @file mat4x4.h
 * @author Cameron A. Craig
-* @date 29 Jan 2017
-* @version 0.2.0
-* @copyright 2017 Cameron A. Craig
+* @copyright 2017 - 2020 Cameron A. Craig
 * @brief 4x4 matrix maths.
 * -- RULE_3_2_CD_do_not_use_special_characters_in_filename
 * -- RULE_8_1_A_provide_file_info_comment
