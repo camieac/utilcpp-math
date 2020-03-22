@@ -5,7 +5,7 @@
 * @brief Min and max functions
 */
 
-#include "min_max.h"
+#include "utilcpp-math/min_max.h"
 
 int ucm::min(int x, int y) {
 	if (x > y) {

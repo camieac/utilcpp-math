@@ -10,7 +10,7 @@
 #include <iostream>
 #include <sstream>
 
-#include "vec3.h"
+#include "utilcpp-math/vec3.h"
 
 /* Constructors */
 ucm::vec3::vec3() {

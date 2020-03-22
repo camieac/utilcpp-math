@@ -8,8 +8,8 @@
 #include <stdlib.h>
 #include <cmath>
 #include <iostream>
-#include "vec4.h"
-#include "mat4x4.h"
+#include "utilcpp-math/vec4.h"
+#include "utilcpp-math/mat4x4.h"
 
 /* Constructors */
 ucm::mat4x4::mat4x4() {

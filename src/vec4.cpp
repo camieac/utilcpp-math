@@ -11,7 +11,7 @@
 #include <iostream>
 #include <sstream>
 
-#include "vec4.h"
+#include "utilcpp-math/vec4.h"
 
 /* Constructors */
 ucm::vec4::vec4() {

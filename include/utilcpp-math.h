@@ -8,10 +8,10 @@
 #ifndef UTILC_MATH_H
 #define UTILC_MATH_H
 
-#include "vec3.h"
-#include "vec4.h"
-#include "mat4x4.h"
-#include "min_max.h"
-#include "constants.h"
+#include "utilcpp-math/vec3.h"
+#include "utilcpp-math/vec4.h"
+#include "utilcpp-math/mat4x4.h"
+#include "utilcpp-math/min_max.h"
+#include "utilcpp-math/constants.h"
 
 #endif //UTILC_MATH_H
