@@ -10,6 +10,7 @@
 #include <stdlib.h>
 #include <cmath>
 #include <iostream>
+#include <sstream>
 
 #include "vec3.h"
 
@@ -172,33 +173,18 @@ bool ucm::vec3::operator==(vec3 rhs) {
 }
 
 float ucm::vec3::operator[](int idx) {
-	switch(idx){
-			case 0: return this->x;
-			case 1: return this->y;
-			case 2: return this->z;
-			default: return NAN;
-		}
+	switch(idx) {
+		case 0: return this->x;
+		case 1: return this->y;
+		case 2: return this->z;
+		default: return NAN;
+	}
 }
 
 string ucm::vec3::toString(void) {
-	char c_string[40];
-	char float_buffer[9];
-
-	strcpy(c_string,"(x: ");
-	sprintf(float_buffer, "%f", x);
-	strcat(c_string,float_buffer);
-
-	strcat(c_string,", y: ");
-	sprintf(float_buffer, "%f", y);
-	strcat(c_string,float_buffer);
-
-	strcat(c_string,", z: ");
-	sprintf(float_buffer, "%f", z);
-	strcat(c_string, float_buffer);
-
-	strcat(c_string,")");
-
-	return std::string(c_string);
+	ostringstream ss;
+	ss << "(x: " << x << ", y: " << y << ", z: " << z << ")";
+	return ss.str();
 }
 
 ostream& ucm::operator<<(ostream& os, const ucm::vec3& v){
