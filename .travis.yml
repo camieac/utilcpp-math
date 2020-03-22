@@ -15,9 +15,10 @@ addons:
 
 before_script:
 - sudo pip install codecov
+- sudo pip install cpplint
 
 script:
-- cmake -DBUILD_TYPE=Travis .
+- cmake -DBUILD_TYPE=Travis -DCMAKE_CXX_CPPLINT=cpplint.
 - make
 - sudo make install
 - pip install --user urllib3[secure]
