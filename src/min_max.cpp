@@ -21,4 +21,18 @@ int ucm::max(int x, int y) {
 		return x;
 	}
 	return y;
-};
+}
+
+float ucm::min(float x, float y) {
+	if (x > y) {
+		return y;
+	}
+	return x;
+}
+
+float ucm::max(float x, float y) {
+	if (x > y) {
+		return x;
+	}
+	return y;
+}

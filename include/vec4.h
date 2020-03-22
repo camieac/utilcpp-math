@@ -65,7 +65,6 @@ namespace ucm {
 		vec4 operator+=(vec4 rhs);
 		vec4 operator-=(vec4 rhs);
 
-		vec4 cross(vec4 rhs);
 		float dot(vec4 rhs);
 
 		/* Miscellaneous methods */

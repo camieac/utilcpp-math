@@ -12,8 +12,10 @@
 
 namespace ucm {
 	int min(int x, int y);
-
 	int max(int x, int y);
+
+	float min(float x, float y);
+	float max(float x, float y);
 };
 
 #endif //UTILC_MIN_MAX_H

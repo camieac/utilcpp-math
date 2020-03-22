@@ -11,6 +11,7 @@
 #include <cmath>
 #include <string>
 #include <iostream>
+#include <sstream>
 
 #include "vec4.h"
 
@@ -190,28 +191,9 @@ float& ucm::vec4::operator[](int idx) {
 }
 
 string ucm::vec4::toString(void) {
-	char c_string[55];
-	char float_buffer[9];
-
-	strcpy(c_string,"(x: ");
-	sprintf(float_buffer, "%f", this->x);
-	strcat(c_string,float_buffer);
-
-	strcat(c_string,", y: ");
-	sprintf(float_buffer, "%f", this->y);
-	strcat(c_string,float_buffer);
-
-	strcat(c_string,", z: ");
-	sprintf(float_buffer, "%f", this->z);
-	strcat(c_string, float_buffer);
-
-	strcat(c_string,", w: ");
-	sprintf(float_buffer, "%f", this->w);
-	strcat(c_string, float_buffer);
-
-	strcat(c_string,")");
-
-	return std::string(c_string);
+	ostringstream ss;
+	ss << "(x: " << x << ", y: " << y << ", z: " << z << ", w: " << w << ")";
+	return ss.str();
 }
 
 ostream& ucm::operator<<(ostream& os, const ucm::vec4& v){
