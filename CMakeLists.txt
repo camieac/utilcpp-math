@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.9)
-project(utilcpp-math)
+cmake_policy(SET CMP0048 NEW)
+
+project(utilcpp-math VERSION 0.2.0)
 enable_testing()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)

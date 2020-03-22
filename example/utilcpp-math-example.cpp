@@ -13,7 +13,7 @@ using namespace std;
 
 #include <stdlib.h>
 
-#include <utilcpp-math.h>
+#include "utilcpp-math.h"
 using namespace ucm;
 
 int main (int argc, char *argv[]){
@@ -85,6 +85,10 @@ int main (int argc, char *argv[]){
 	y = ones[1];
 	z = ones[2];
 	cout << "[0]:"<< x << ", [1]:" << y << ", [2]:" << z << endl;
+
+	cout << endl << "Min/Max" << endl;
+	cout << "min(1, 0) = " << min(1, 0) << endl;
+	cout << "max(1, 0) = " << max(1, 0) << endl;
 
 	return EXIT_SUCCESS;
 }
