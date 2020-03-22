@@ -3,8 +3,6 @@
 * @author Cameron A. Craig
 * @copyright 2017 - 2020 Cameron A. Craig
 * @brief Defines uc_timing_h handle and function prototypes.
-* -- RULE_3_2_CD_do_not_use_special_characters_in_filename
-* -- RULE_8_1_A_provide_file_info_comment
 */
 
 #ifndef UTILC_MATH_H
