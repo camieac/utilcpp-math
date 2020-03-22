@@ -18,7 +18,7 @@ before_script:
 - sudo pip install cpplint
 
 script:
-- cmake -DBUILD_TYPE=Travis -DCMAKE_CXX_CPPLINT=cpplint.
+- cmake -DBUILD_TYPE=Travis -DCMAKE_CXX_CPPLINT=cpplint;--filter=-whitespace/tab,-build/include_subdir .
 - make
 - sudo make install
 - pip install --user urllib3[secure]

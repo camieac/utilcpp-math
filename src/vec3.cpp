@@ -3,8 +3,6 @@
 * @author Cameron A. Craig
 * @copyright 2017 - 2020 Cameron A. Craig
 * @brief 3-axis vector maths.
-* -- RULE_3_2_CD_do_not_use_special_characters_in_filename
-* -- RULE_8_1_A_provide_file_info_comment
 */
 
 #include <stdlib.h>
@@ -15,19 +13,19 @@
 #include "vec3.h"
 
 /* Constructors */
-ucm::vec3::vec3(){
+ucm::vec3::vec3() {
 	this->x = 0.0f;
 	this->y = 0.0f;
 	this->z = 0.0f;
 }
 
-ucm::vec3::vec3(float x, float y, float z){
+ucm::vec3::vec3(float x, float y, float z) {
 	this->x = x;
 	this->y = y;
 	this->z = z;
 }
 
-ucm::vec3::vec3(float xyz){
+ucm::vec3::vec3(float xyz) {
 	this->x = xyz;
 	this->y = xyz;
 	this->z = xyz;
@@ -52,10 +50,10 @@ ucm::vec3 ucm::vec3::operator-(vec3 rhs) {
 
 float ucm::vec3::dot(vec3 rhs) {
 	return (
-			this->x * rhs.x +
-			this->y * rhs.y +
-			this->z * rhs.z
-		);
+		this->x * rhs.x +
+		this->y * rhs.y +
+		this->z * rhs.z
+	);
 }
 
 ucm::vec3 ucm::vec3::cross(ucm::vec3 rhs) {
@@ -100,28 +98,28 @@ ucm::vec3 ucm::vec3::operator/(float scalar) {
 }
 
 /* Shorthand scalar operators */
-ucm::vec3 ucm::vec3::operator+=(float scalar){
+ucm::vec3 ucm::vec3::operator+=(float scalar) {
 	this->x = this->x + scalar;
 	this->y = this->y + scalar;
 	this->z = this->z + scalar;
 	return (*this);
 }
 
-ucm::vec3 ucm::vec3::operator-=(float scalar){
+ucm::vec3 ucm::vec3::operator-=(float scalar) {
 	this->x = this->x - scalar;
 	this->y = this->y - scalar;
 	this->z = this->z - scalar;
 	return (*this);
 }
 
-ucm::vec3 ucm::vec3::operator*=(float scalar){
+ucm::vec3 ucm::vec3::operator*=(float scalar) {
 	this->x = this->x * scalar;
 	this->y = this->y * scalar;
 	this->z = this->z * scalar;
 	return (*this);
 }
 
-ucm::vec3 ucm::vec3::operator/=(float scalar){
+ucm::vec3 ucm::vec3::operator/=(float scalar) {
 	this->x = this->x / scalar;
 	this->y = this->y / scalar;
 	this->z = this->z / scalar;
@@ -129,14 +127,14 @@ ucm::vec3 ucm::vec3::operator/=(float scalar){
 }
 
 /* Shorthand vector operators */
-ucm::vec3 ucm::vec3::operator+=(vec3 rhs){
+ucm::vec3 ucm::vec3::operator+=(vec3 rhs) {
 	this->x = this->x + rhs.x;
 	this->y = this->y + rhs.y;
 	this->z = this->z + rhs.z;
 	return (*this);
 }
 
-ucm::vec3 ucm::vec3::operator-=(vec3 rhs){
+ucm::vec3 ucm::vec3::operator-=(vec3 rhs) {
 	this->x = this->x - rhs.x;
 	this->y = this->y - rhs.y;
 	this->z = this->z - rhs.z;
@@ -145,7 +143,7 @@ ucm::vec3 ucm::vec3::operator-=(vec3 rhs){
 
 /* Miscellaneous methods */
 float ucm::vec3::length() {
-	return float(sqrt(
+	return static_cast<float>(sqrt(
 		this->x * this->x +
 		this->y * this->y +
 		this->z * this->z
@@ -187,7 +185,7 @@ string ucm::vec3::toString(void) {
 	return ss.str();
 }
 
-ostream& ucm::operator<<(ostream& os, const ucm::vec3& v){
+ostream& ucm::operator<<(ostream& os, const ucm::vec3& v) {
 	os << v.x << endl;
 	os << v.y << endl;
 	os << v.z << endl;

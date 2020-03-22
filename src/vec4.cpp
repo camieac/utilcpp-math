@@ -3,8 +3,6 @@
 * @author Cameron A. Craig
 * @copyright 2017 - 2020 Cameron A. Craig
 * @brief 4-axis vector maths.
-* -- RULE_3_2_CD_do_not_use_special_characters_in_filename
-* -- RULE_8_1_A_provide_file_info_comment
 */
 
 #include <stdlib.h>
@@ -16,21 +14,21 @@
 #include "vec4.h"
 
 /* Constructors */
-ucm::vec4::vec4(){
+ucm::vec4::vec4() {
 	this->x = 0.0f;
 	this->y = 0.0f;
 	this->z = 0.0f;
 	this->w = 0.0f;
 }
 
-ucm::vec4::vec4(float xyzw){
+ucm::vec4::vec4(float xyzw) {
 	this->x = xyzw;
 	this->y = xyzw;
 	this->z = xyzw;
 	this->w = xyzw;
 }
 
-ucm::vec4::vec4(float x, float y, float z, float w){
+ucm::vec4::vec4(float x, float y, float z, float w) {
 	this->x = x;
 	this->y = y;
 	this->z = z;
@@ -113,7 +111,7 @@ ucm::vec4 ucm::vec4::operator/(float scalar) {
 }
 
 /* Shorthand vector operators */
-ucm::vec4 ucm::vec4::operator+=(vec4 rhs){
+ucm::vec4 ucm::vec4::operator+=(vec4 rhs) {
 	this->x = this->x + rhs.x;
 	this->y = this->y + rhs.y;
 	this->z = this->z + rhs.z;
@@ -121,7 +119,7 @@ ucm::vec4 ucm::vec4::operator+=(vec4 rhs){
 	return (*this);
 }
 
-ucm::vec4 ucm::vec4::operator-=(vec4 rhs){
+ucm::vec4 ucm::vec4::operator-=(vec4 rhs) {
 	this->x = this->x - rhs.x;
 	this->y = this->y - rhs.y;
 	this->z = this->z - rhs.z;
@@ -130,7 +128,7 @@ ucm::vec4 ucm::vec4::operator-=(vec4 rhs){
 }
 
 /* Shorthand scalar operators */
-ucm::vec4 ucm::vec4::operator+=(float scalar){
+ucm::vec4 ucm::vec4::operator+=(float scalar) {
 	this->x = this->x + scalar;
 	this->y = this->y + scalar;
 	this->z = this->z + scalar;
@@ -138,7 +136,7 @@ ucm::vec4 ucm::vec4::operator+=(float scalar){
 	return (*this);
 }
 
-ucm::vec4 ucm::vec4::operator-=(float scalar){
+ucm::vec4 ucm::vec4::operator-=(float scalar) {
 	this->x = this->x - scalar;
 	this->y = this->y - scalar;
 	this->z = this->z - scalar;
@@ -146,7 +144,7 @@ ucm::vec4 ucm::vec4::operator-=(float scalar){
 	return (*this);
 }
 
-ucm::vec4 ucm::vec4::operator*=(float scalar){
+ucm::vec4 ucm::vec4::operator*=(float scalar) {
 	this->x = this->x * scalar;
 	this->y = this->y * scalar;
 	this->z = this->z * scalar;
@@ -154,7 +152,7 @@ ucm::vec4 ucm::vec4::operator*=(float scalar){
 	return (*this);
 }
 
-ucm::vec4 ucm::vec4::operator/=(float scalar){
+ucm::vec4 ucm::vec4::operator/=(float scalar) {
 	this->x = this->x / scalar;
 	this->y = this->y / scalar;
 	this->z = this->z / scalar;
@@ -164,7 +162,7 @@ ucm::vec4 ucm::vec4::operator/=(float scalar){
 
 /* Miscellaneous methods */
 float ucm::vec4::length() {
-	return float(sqrt(
+	return static_cast<float>(sqrt(
 		this->x*this->x +
 		this->y*this->y +
 		this->z*this->z +
@@ -182,7 +180,7 @@ ucm::vec4 ucm::abs(ucm::vec4 v) {
 }
 
 float& ucm::vec4::operator[](int idx) {
-	switch(idx){
+	switch(idx) {
 		case 0: return this->x;
 		case 1: return this->y;
 		case 2: return this->z;
@@ -196,7 +194,7 @@ string ucm::vec4::toString(void) {
 	return ss.str();
 }
 
-ostream& ucm::operator<<(ostream& os, const ucm::vec4& v){
+ostream& ucm::operator<<(ostream& os, const ucm::vec4& v) {
 	os << v.x << endl;
 	os << v.y << endl;
 	os << v.z << endl;
