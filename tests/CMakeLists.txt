@@ -13,6 +13,7 @@ else()
 	message(STATUS "Setting up Boost")
 
 	include_directories (${INCLUDES})
+	link_directories(../lib)
 
 	add_executable(test-utilcpp-math ${TEST_SRCS})
 

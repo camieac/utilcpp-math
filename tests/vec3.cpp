@@ -154,7 +154,7 @@ BOOST_AUTO_TEST_CASE(test_shorthand_scalar_multiply) {
 BOOST_AUTO_TEST_CASE(test_shorthand_scalar_divide) {
 	vec3 v = ones;
 	v /= 2.0f;
-	BOOST_CHECK(v == vec3(0.5f,0.5f,0.5f));
+	BOOST_CHECK(v == vec3(0.5f, 0.5f, 0.5f));
 }
 
 /* Vector Shorthand Operators */
@@ -193,8 +193,8 @@ BOOST_AUTO_TEST_CASE(test_abs) {
 }
 
 BOOST_AUTO_TEST_CASE(test_tostring) {
-	vec3 v = vec3(6.0f, 6.0f, 7.0f);
-	BOOST_CHECK(v.toString() == "(x: 6.000000, y: 6.000000, z: 7.000000)");
+	vec3 v = vec3(6.0f, 6.0f, 10.0f/3);
+	BOOST_CHECK(v.toString() == "(x: 6, y: 6, z: 3.33333)");
 }
 
 

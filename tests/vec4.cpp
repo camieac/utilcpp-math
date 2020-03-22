@@ -168,10 +168,10 @@ BOOST_AUTO_TEST_CASE(test_abs) {
 }
 
 BOOST_AUTO_TEST_CASE(test_tostring) {
-	vec4 v = vec4(6.0f, 6.0f, 7.0f, 8.0f);
+	vec4 v = vec4(6.0f, 6.01f, 7.123f, 10.0f/3);
 	BOOST_CHECK(
 		v.toString() ==
-			"(x: 6.000000, y: 6.000000, z: 7.000000, w: 8.000000)"
+			"(x: 6, y: 6.01, z: 7.123, w: 3.33333)"
 	);
 }
 

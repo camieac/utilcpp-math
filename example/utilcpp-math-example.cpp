@@ -186,8 +186,5 @@ int main (int argc, char *argv[]) {
 	vec4_examples();
 	min_max_examples();
 
-
-
-
 	return EXIT_SUCCESS;
 }

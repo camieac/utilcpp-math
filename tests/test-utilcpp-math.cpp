@@ -12,7 +12,7 @@
 * https://libcheck.github.io/check/doc/check_html/index.html#Top
 */
 
-#define BOOST_TEST_MODULE "Unit test module for ucm_math library"
+#define BOOST_TEST_MODULE "Unit test module for utilcpp-math library"
 #include <boost/test/included/unit_test.hpp>
 #include "vec3.cpp"
 #include "vec4.cpp"
